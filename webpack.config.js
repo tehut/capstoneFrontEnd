@@ -27,5 +27,10 @@ module.exports = {
       multiStep: true
     }),
     new DashboardPlugin()
-  ]
+  ],
+  resolve: {
+    alias: {
+      fs: 'graceful-fs/fs'
+    }
+  }
 };

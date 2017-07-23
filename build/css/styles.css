@@ -1,0 +1,72 @@
+@include foundation-everything;
+
+main {
+    background: lightblue;
+}
+
+header {
+
+  /*background-color: lightgreen;*/
+  /*padding: 0.5rem;*/
+}
+
+/*h3#login-form {
+  display:inline;
+}*/
+
+/*#login-form {
+  display: inline;
+}*/
+label {
+  display: inline;
+}
+
+button.success {
+  margin-right: 1.2rem;
+  display: inline;
+}
+
+aside.create-tasklist {
+  background-color: navy;
+  color: #FFFFFF;
+}
+aside label {
+  color: #FFFFFF;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+div {
+  display: inline;
+}
+
+
+#order-form {
+
+  z-index: 10;
+  /*position: fixed;*/
+  width: 50%;
+  height: 60%;
+  top: 30%;
+  left: 30%;
+  background-color: gray;
+  text-align: center;
+  /*border: solid black;*/
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 5%;
+}
+ li{
+   vertical-align: top;
+   margin: 5px;
+   list-style: none;
+   width:300px;
+   display: inline-block;
+ }
+
+ p.title{
+   background-color: rgba(193, 66, 66, 0.8);
+   vertical-align: bottom;
+ }
