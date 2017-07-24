@@ -39,6 +39,6 @@
     "node":  "6.x",
     "npm": "3.10.10",
     "webpack": "^1.13.3",
-    "webpack-dashboard": "^0.2.0",
+    "webpack-dashboard": "^0.2.0"
   }
 }
