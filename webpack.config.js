@@ -21,7 +21,6 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     inline: true,
-    port: 8081
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin({
