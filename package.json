@@ -1,6 +1,9 @@
 {
   "name": "wmsapp",
   "version": "1.0.0",
+  "engines":{
+        "node":  "6.11.1",
+  }
   "description": "",
   "main": "./bin/app.bundle.js",
   "scripts": {
@@ -37,7 +40,6 @@
     "fs": "0.0.1-security",
     "jquery.cookie": "^1.4.1",
     "pdfmake-browserified": "^0.1.4",
-    "node":  "6.x.x",
     "npm": "3.10.10",
     "webpack": "^1.13.3",
     "webpack-dashboard": "^0.2.0"
