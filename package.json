@@ -1,6 +1,7 @@
 {
   "name": "wmsapp",
   "version": "1.0.0",
+  "description": "",
   "main": "./bin/app.bundle.js",
   "scripts": {
     "start": "webpack-dashboard -- webpack-dev-server",
