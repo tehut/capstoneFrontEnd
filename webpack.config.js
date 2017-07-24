@@ -16,19 +16,19 @@ module.exports = {
     }]
   },
   devtool: 'source-map',
-  devServer: {
-    contentBase: './build',
-    historyApiFallback: true,
-    hot: true,
-    inline: true,
-    port: process.env.PORT
-  },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin({
-      multiStep: true
-    }),
-    new DashboardPlugin()
-  ],
+  // devServer: {
+  //   contentBase: './build',
+  //   historyApiFallback: true,
+  //   // hot: true,
+  //   inline: true,
+  //   port: process.env.PORT
+  // },
+  // plugins: [
+  //   new webpack.HotModuleReplacementPlugin({
+  //     multiStep: true
+  //   }),
+  //   new DashboardPlugin()
+  // ],
   resolve: {
     alias: {
       fs: 'graceful-fs/fs'
