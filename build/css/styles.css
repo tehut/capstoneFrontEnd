@@ -10,13 +10,23 @@ header {
   /*padding: 0.5rem;*/
 }
 
-/*h3#login-form {
+.login {
+  width: 150px;
   display:inline;
-}*/
+  margin: 0px;
+  padding:0px;
+}
 
-/*#login-form {
-  display: inline;
-}*/
+button#login{
+  display:inline;
+  margin: 0px;
+  padding:0px;
+  width: 80px;
+}
+input#inputPassword {
+width: 150px;
+display: inline;
+}
 label {
   display: inline;
 }
