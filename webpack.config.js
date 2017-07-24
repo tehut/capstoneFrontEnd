@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
-  entry: ['babel-polyfill', './src/app.js'],
+  entry: [ './src/app.js'],
   output: {
     path: './build',
     filename: 'app.bundle.js'
