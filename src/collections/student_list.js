@@ -4,7 +4,7 @@ import _ from 'underscore'
 import AuthCollection from './auth_collection'
 var StudentList = Backbone.Collection.extend({
   model: Student,
-  url: 'http://localhost:3000/api/v1/children.json',
+  url: 'http://transparentclassroom.com/api/v1/children.json',
   comparator: 'age',
 
   // parse: function(data) {

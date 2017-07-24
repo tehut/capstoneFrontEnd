@@ -46,7 +46,7 @@ var StudentListView = Backbone.View.extend({
     event.preventDefault();
     var token =  Cookies.get('token');
     console.log(token);
-    var applicantBirthdayList = new StudentList({url:'http://localhost:3000/api/v1/children.json'});
+    var applicantBirthdayList = new StudentList({url:'http://transparentclassroom.com/api/v1/children.json'});
     applicantBirthdayList.fetch({
       headers: {'Authorization': 'Basic ' + token},
       success: function(model){
@@ -94,8 +94,8 @@ var StudentListView = Backbone.View.extend({
   },
   callApi: function(event){
     var token = Cookies.get('token');
-    var studentList = new StudentList({url:'http://localhost:3000/api/v1/children.json'});
-    var tc_url = 'http://localhost:3000/api/v1/children.json';
+    var studentList = new StudentList({url:'http://transparentclassroom.com/api/v1/children.json'});
+    var tc_url = 'http://transparentclassroom.com/api/v1/children.json';
     var options = {
       url: tc_url,
       model: Student,
