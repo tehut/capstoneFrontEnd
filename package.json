@@ -36,7 +36,7 @@
     "fs": "0.0.1-security",
     "jquery.cookie": "^1.4.1",
     "pdfmake-browserified": "^0.1.4",
-    "node":  "6.x",
+    "node":  "6.11.1",
     "npm": "3.10.10",
     "webpack": "^1.13.3",
     "webpack-dashboard": "^0.2.0"
