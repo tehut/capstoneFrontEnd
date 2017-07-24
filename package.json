@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/tehut/backbone-baseline#readme",
   "devDependencies": {
-    "jasmine-expect": "^3.0.1",
+    "jasmine-expect": "^3.0.1"
   },
   "dependencies": {
     "babel-core": "^6.18.2",
