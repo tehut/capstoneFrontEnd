@@ -8,16 +8,16 @@
   <title>WMS </title>
 </head>
 <body>
+<section id='site'>
 
+  </section>
+
+  <script id="site-template" type="text/template">
   <header class= "row 13">
     <h3 id='page-title' class="columns large-4 medium-4 small-12" >
       Student Information
     </h3>
-    <!-- <section > -->
-        <!-- <section class= "alert alert-error" style="display"> -->
 
-        <!-- </section> -->
-          <!-- <form  id='login-form'> -->
             <section class="form columns large-8 medium-8 small-12">
               <label  for="inputEmail">Email</label>
               <input  class= 'login' type= "email" id="inputEmail" >
@@ -25,8 +25,7 @@
               <input  type ="password" id="inputPassword">
               <button class= 'login' class="button"  id="login">Login</a>
             </section>
-          <!-- </form> -->
-    <!-- </section> -->
+
 
 
 
@@ -35,7 +34,7 @@
   </header>
   <main>
 
-    <section id="order-form"></section>
+
 
     <section class=" columns large-4 small-12">
 
@@ -71,59 +70,29 @@
       <button type="submit" class="button" id="library">Download Applicant Age List</button>
 
     </div>
-    <section class="columns large-4 small-12" id='movie'>
 
-
-    </section>
   </section>
 
 
   <section >
-    <!-- <section id='movie-list'></section> -->
 
 
-    <section class= "column large-10 medium-10 small-12">
-
-      <!-- <a href="" class="movie-poster" data-movieid = <%- movie.title%>> -->
-      <section class="movie-card"></section>
-      <ul>
-      </ul>
-
-    </section>
-  </section>
-  <section id='new-movie'></section>
+</script>
 </main>
 
 <!-- Templates -->
 
 
-<script id="movie-card-template" type="text/template">
+<!-- <script id="movie-card-template" type="text/template">
   <ul>
     <%- student.first_name %>
+    <button id="test-button"> Test Button </button>
   </ul>
-  </script>
-<!--
-  <script id="search-card-template" type="text/template">
-    <img src=<%-movie.image_url%>>
-    <p><%- movie.title %></p>
-    <button type="submit" class="button" id="open">Movie Info</button>
   </script> -->
-
-  <!-- <script id="movie-info-template" type="text/template">
-    <img src=<%-movie.image_url%>>
-    <h3>Title: <%- movie.title %></h3>
-    <h4>Synopsis: <%- movie.overview %></h4>
-    <h4>Release Date: <%- movie.release_date %></h4>
-    <label for="title">How Many Copies Would You Like to Order?</label>
-    <input type="text" name="title" id="inventory"></input>
-    <button type="submit" class="button" id="order-movie">Order Movie</button> -->
-
-
-  <!-- </script> -->
 
 
 
   <script src="/app.bundle.js"></script>
 
-</body>
+</body> 
 </html>
