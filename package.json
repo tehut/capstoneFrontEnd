@@ -10,7 +10,7 @@
   "main": "./bin/app.bundle.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "heroku-run": "webpack -p --progress && node server.js", 
+    "heroku-run": "webpack -p --progress && node server.js",
     "test": "jasmine"
   },
   "repository": "tehut/backbone-baseline",
@@ -22,6 +22,13 @@
     "jasmine-expect": "^3.0.1"
   },
   "dependencies": {
+
+    "aliasify": {
+        "aliases": {
+            "d3": "./shims/d3.js",
+            "underscore": "Window.lodash"
+        }
+    },
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
     "babel-plugin-module-resolver": "^2.3.0",
