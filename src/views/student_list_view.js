@@ -11,7 +11,7 @@ var Cookies = require('js-cookie');
 
 var StudentListView = Backbone.View.extend({
   initialize: function(options) {
-    // this.movieTemplate = _.template($("#movie-card-template").html());
+    this.movieTemplate = _.template($("#movie-card-template").html());
     this.listElement = this.$(".movie-card");
 
     this.studentList = [];
@@ -87,7 +87,7 @@ var StudentListView = Backbone.View.extend({
   addStudent: function(student) {
     var studentView = new StudentView({
       model: student,
-      // template: this.movieTemplate,
+      template: this.movieTemplate,
       // movieSearchTemplate : this.movieSearchTemplate
     });
     this.studentList.push(studentView);
@@ -108,7 +108,7 @@ var StudentListView = Backbone.View.extend({
     var c_options = {
       el: $('main'),
       model: studentList,
-      // template: _.template($("#movie-card-template").html())
+      template: _.template($("#movie-card-template").html())
     };
     var studentListDisplay = new StudentListView(c_options);
 
