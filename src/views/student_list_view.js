@@ -11,19 +11,27 @@ var Cookies = require('js-cookie');
 
 var StudentListView = Backbone.View.extend({
   initialize: function(options) {
-    this.movieTemplate = _.template($("#movie-card-template").html());
-    this.listElement = this.$(".movie-card");
+
+    this.template = _.template($("#site-template").html())
+    // this.movieTemplate = _.template($("#movie-card-template").html());
+    this.listElement = this.$("#site-card");
+
 
     this.studentList = [];
 
-    this.listenTo(this.model,   '#search', this.callApi);
+    this.listenTo(this.model, '#search', this.callApi);
     this.listenTo(this.model, 'add', this.addStudent);
     this.listenTo(this.model, 'update', this.render);
     this.listenTo(this.model, '#library', this.makeAPDF);
+    this.listenTo(this.model, '#test-button',this.log );
+    // var html = this.template
+    // //
+    // this.$el.html(html)
+    // this.delegateEvents();
   },
 
   render: function() {
-    this.listElement.empty();
+    // this.listElement.empty();
     this.studentList.forEach(function(studentView){
       studentView.render();
       this.listElement.prepend(studentView.$el);
@@ -34,19 +42,22 @@ var StudentListView = Backbone.View.extend({
 
   events: {
     'click #search': 'callApi',
-    'click #test': 'Log',
     'click #library': 'makeAPDF',
+    'click #test-button':'log'
 
 
   },
+  log:function (event){
+    console.log(event);
 
+  },
 
   makeAPDF: function (event){
 
     event.preventDefault();
     var token =  Cookies.get('token');
     console.log(token);
-    var applicantBirthdayList = new StudentList({url:'http://transparentclassroom.com/api/v1/children.json'});
+    var applicantBirthdayList = new StudentList({url:'http://localhost:3000/api/v1/children.json'});
     applicantBirthdayList.fetch({
       headers: {'Authorization': 'Basic ' + token},
       success: function(model){
@@ -78,24 +89,25 @@ var StudentListView = Backbone.View.extend({
     });
   },
 
-  createStudent: function(event) {
-    event.preventDefault();
-    var rawStudent = this.getInput();
-    this.model.create(rawStudent);
-    this.clearInput();
-  },
-  addStudent: function(student) {
-    var studentView = new StudentView({
-      model: student,
-      template: this.movieTemplate,
-      // movieSearchTemplate : this.movieSearchTemplate
-    });
-    this.studentList.push(studentView);
-  },
+  // createStudent: function(event) {
+  //   event.preventDefault();
+  //   var rawStudent = this.getInput();
+  //   this.model.create(rawStudent);
+  //   this.clearInput();
+  // },
+  // addStudent: function(student) {
+  //   var studentView = new StudentView({
+  //     model: student,
+  //     template: this.movieTemplate,
+  //     movieSearchTemplate : this.movieSearchTemplate
+  //   });
+  //   this.studentList.push(studentView);
+  // },
   callApi: function(event){
     var token = Cookies.get('token');
-    var studentList = new StudentList({url:'http://transparentclassroom.com/api/v1/children.json'});
-    var tc_url = 'http://transparentclassroom.com/api/v1/children.json';
+    console.log('here');
+    var studentList = new StudentList({url:'http://localhost:3000/api/v1/children.json'});
+    var tc_url = 'http://localhost:3000/api/v1/children.json';
     var options = {
       url: tc_url,
       model: Student,
@@ -108,7 +120,7 @@ var StudentListView = Backbone.View.extend({
     var c_options = {
       el: $('main'),
       model: studentList,
-      template: _.template($("#movie-card-template").html())
+      template: _.template($("#site-template").html())
     };
     var studentListDisplay = new StudentListView(c_options);
 

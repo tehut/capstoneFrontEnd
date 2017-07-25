@@ -31,13 +31,13 @@ $('#login').click(function(event){
       el: $('#foundation'),
       model: 'Student',
       method: 'GET',
-      // template: _.template($("#movie-card-template").html()),
+      template: _.template($("#site-template").html()),
     };
   // });
 
-
-    var studentListDisplay = new StudentListView(options);
-     studentListDisplay.render();
+    //
+    // var studentListDisplay = new StudentListView(options);
+    //  studentListDisplay.render();
 
 
 
@@ -49,13 +49,16 @@ $('#login').click(function(event){
   // });
 
 });
-
+//
 function loadQuickbooks($el) {
   $el.html('<h1>Quickbooks, baby foo foo</h1>')
 }
 
 function loadForms($el) {
-  $el.html('<h1>Let us print forms</h1>')
+
+      var studentListDisplay = new StudentListView(options);
+       studentListDisplay.render();
+  // $el.html('<h1>Let us print forms</h1>')
   // $.getScript('https://wmsfront.herokuapp.com/build/app.bundle.js', function(){console.log("TG: successfully loaded script")})
 }
 
