@@ -9,7 +9,8 @@
   "license": "MIT",
   "main": "./bin/app.bundle.js",
   "scripts": {
-    "start": "webpack -p --progress && node server.js", 
+    "start": "webpack-dev-server",
+    "heroku-run": "webpack -p --progress && node server.js", 
     "test": "jasmine"
   },
   "repository": "tehut/backbone-baseline",

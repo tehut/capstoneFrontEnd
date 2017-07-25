@@ -5,8 +5,8 @@ import Backbone from 'backbone';
 var StudentView = Backbone.View.extend({
   // tagName: 'li',
   initialize: function(options) {
-    this.template = options.template;
-    this.movieSearchTemplate = options.movieSearchTemplate;
+    // this.template = options.template;
+    // this.movieSearchTemplate = options.movieSearchTemplate;
     this.listenTo(this.model, 'change', this.render);
   },
 
@@ -15,10 +15,10 @@ var StudentView = Backbone.View.extend({
 
   render: function() {
   console.log(this);
-      var html = this.template({student: this.model.toJSON()});
-      //
-      this.$el.html(html)
-      this.delegateEvents();
+      // var html = this.template({student: this.model.toJSON()});
+      // //
+      // this.$el.html(html)
+      // this.delegateEvents();
 
 // console.log('hi');
 

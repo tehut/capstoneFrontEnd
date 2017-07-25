@@ -28,10 +28,10 @@ $('#login').click(function(event){
 })
 
     var options = {
-      el: $('body'),
+      el: $('#foundation'),
       model: 'Student',
       method: 'GET',
-      template: _.template($("#movie-card-template").html()),
+      // template: _.template($("#movie-card-template").html()),
     };
   // });
 
@@ -49,3 +49,35 @@ $('#login').click(function(event){
   // });
 
 });
+
+function loadQuickbooks($el) {
+  $el.html('<h1>Quickbooks, baby foo foo</h1>')
+}
+
+function loadForms($el) {
+  $el.html('<h1>Let us print forms</h1>')
+  // $.getScript('https://wmsfront.herokuapp.com/build/app.bundle.js', function(){console.log("TG: successfully loaded script")})
+}
+
+console.log(
+  'stuff you can play with',
+  'currentClassroomId', tc.env.currentClassroomId,
+  'currentSchoolId', tc.env.currentSchoolId,
+  'currentUserId', tc.env.currentUserId,
+  'firstClassroomId', tc.env.firstClassroomId,
+  'assetHost', tc.env.assetHost,
+  'canEdit', tc.env.canEdit
+)
+
+$(function() {
+  if (!tc.env.canEdit) return;
+
+  tc.Plugins.menuControl.primary.add('Quickbooks', tc.utils.schoolUrl('networks/wedgwood/school/quickbooks'), 'usd')
+  tc.Plugins.menuControl.primary.add('Print Forms', tc.utils.schoolUrl('networks/wedgwood/school/forms'), 'print')
+
+  if (document.URL.endsWith('/networks/wedgwood/school/quickbooks')) {
+    loadQuickbooks($('#foundation'))
+  } else if (document.URL.endsWith('/networks/wedgwood/school/forms')) {
+    loadForms($('#foundation'))
+  }
+})

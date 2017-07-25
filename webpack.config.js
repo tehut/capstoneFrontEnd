@@ -2,7 +2,7 @@
 var webpack = require('webpack');
 var DashboardPlugin = require('webpack-dashboard/plugin');
 
-module.exports = {
+var config = {
   entry: [ './src/app.js'],
   output: {
     path: './build',
@@ -35,3 +35,15 @@ module.exports = {
     }
   }
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  config.devServer = {
+    contentBase: './build',
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    port: 8080
+  }
+}
+
+module.exports = config
