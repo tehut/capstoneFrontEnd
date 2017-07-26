@@ -67,7 +67,6 @@ function loadForms($el) {
   stringHtml += "<\/script>";
   stringHtml += "<\/main>";
   stringHtml += "";
-  stringHtml += "  <script src=\"\/app.bundle.js\"><\/script>";
   stringHtml += "";
   stringHtml += "<\/body>";
   stringHtml += "<\/html>";
