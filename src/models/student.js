@@ -1,12 +1,8 @@
 import Backbone from 'backbone';
-import $ from 'jquery';
-import _ from 'underscore';
-import AuthModel from './auth_model'
+
 var  Student = Backbone.Model.extend({
 
   initialize: function(attributes, options) {
-    console.log(this);
-
     this.calculateBirthday(attributes.birth_date);
   },
 
@@ -23,11 +19,8 @@ var  Student = Backbone.Model.extend({
     var diff = cur-birthdate;
     var age = Math.floor(diff/31536000000);
 
-
       this.set('age',age)
-
   }
-
 });
 
 

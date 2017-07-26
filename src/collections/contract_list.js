@@ -10,8 +10,6 @@ var ContractList = AuthCollection.extend({
     return data.fields;
   },
   initialize: function(options) {
-
-    // console.log(options);
   },
 
 });

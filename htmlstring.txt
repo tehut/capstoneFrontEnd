@@ -1,0 +1,52 @@
+<section id='site'>
+  <header class= "row 13">
+    <h3 id='page-title' class="columns large-4 medium-4 small-12" >
+      Student Information
+    </h3>
+        <section class="form columns large-8 medium-8 small-12">
+          <label  for="inputEmail">Email</label>
+          <input  class= 'login' type= "email" id="inputEmail" >
+          <label >Password</label>
+          <input  type ="password" id="inputPassword">
+          <button class= 'login' class="button"  id="login">Login</a>
+        </section>
+        <hr>
+  </header>
+  <main>
+
+    <section class=" columns large-4 small-12">
+      <form class="form-horizontal">
+        </div>
+        <div>
+            <div class="control-group">
+              <label> Choose Classroom
+                <select>
+                  <option value=633> South Campus </option>
+                  <option value=634> North: Ladybug </option>
+                  <option value=635>North: Butterly </option>
+                </select>
+              </label>
+            </div>
+        </div>
+        <div>
+            <div class="control-group">
+              <label> Choose Operation
+                <select>
+                  <option value=633> Download Applicant Age List </option>
+                  <option value=634> Download Potty Training Report </option>
+                  <option value=635>Download Class Birthday List </option>
+                </select>
+              </label>
+            </div>
+        </div>
+      </form>
+
+      <button type="submit" class="button woogs" id="search">Download Class Email List</button>
+      <button type="submit" class="button" id="library">Download Applicant Age List</button>
+
+    </div>
+
+  </section>
+
+
+</section >

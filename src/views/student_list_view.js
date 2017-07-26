@@ -4,13 +4,16 @@ import Backbone from 'backbone';
 import StudentView from './student_view';
 import StudentList from '../collections/student_list';
 import Student from '../models/student';
-import Contract from '../models/contract';
-import ContractList from '../collections/contract_list';
+import Contract from '../models/allforms';
+import ContractList from '../collections/all_form_list';
 var createPdf = require('pdfmake-browserified');
 var Cookies = require('js-cookie');
 
 var StudentListView = Backbone.View.extend({
   initialize: function(options) {
+
+    this.movieTemplate = _.template($("#movie-card-template").html());
+    this.listElement = this.$(".movie-card");
 
     this.template = _.template($("#site-template").html())
     // this.movieTemplate = _.template($("#movie-card-template").html());
@@ -89,6 +92,21 @@ var StudentListView = Backbone.View.extend({
     });
   },
 
+
+  createStudent: function(event) {
+    event.preventDefault();
+    var rawStudent = this.getInput();
+    this.model.create(rawStudent);
+    this.clearInput();
+  },
+  addStudent: function(student) {
+    var studentView = new StudentView({
+      model: student,
+      template: this.movieTemplate,
+      // movieSearchTemplate : this.movieSearchTemplate
+    });
+    this.studentList.push(studentView);
+  },
   // createStudent: function(event) {
   //   event.preventDefault();
   //   var rawStudent = this.getInput();
@@ -103,6 +121,7 @@ var StudentListView = Backbone.View.extend({
   //   });
   //   this.studentList.push(studentView);
   // },
+
   callApi: function(event){
     var token = Cookies.get('token');
     console.log('here');
@@ -120,7 +139,11 @@ var StudentListView = Backbone.View.extend({
     var c_options = {
       el: $('main'),
       model: studentList,
+
+      // template: _.template($("#movie-card-template").html())
+
       template: _.template($("#site-template").html())
+
     };
     var studentListDisplay = new StudentListView(c_options);
 

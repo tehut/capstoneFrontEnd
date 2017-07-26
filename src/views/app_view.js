@@ -4,10 +4,10 @@ import StudentView from './student_view';
 import StudentList from '../collections/student_list';
 import StudentListView from 'views/student_list_view'
 import Student from '../models/student';
-import Contract from '../models/contract';
-import ContractList from '../collections/contract_list';
+import AllForms from '../models/AllForms';
+import AllFormsList from '../collections/AllForms_list';
 var createPdf = require('pdfmake-browserified');
-var Cookies = require('js-cookie');
+// var Cookies = require('js-cookie');
 var _ = require('lodash')
 
 var AppView = Backbone.View.extend({
